@@ -6,7 +6,7 @@ Convert standard date string to Date, based on moment.js; and invalidate bad for
 
 ## Examples
 
-Valid date strings include,
+Valid date strings include (see [/src/format.ts](/src/format.ts)),
 
 - ISO 8601 date strings (from JavaScript, Python or Java)
 - RFC 2822 date strings
@@ -36,4 +36,4 @@ npm i valid-moment
 
 ## Tests
 
-For current testing results, see [/tests/tests.json](/tests/tests.json). The tests are done at GMT+0700.
+- For current testing results, see [/tests/tests.json](/tests/tests.json). The tests are done at GMT+0700.
