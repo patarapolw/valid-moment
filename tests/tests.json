@@ -1,0 +1,92 @@
+[
+  {
+    "name": "new Date().toISOString()",
+    "input": "2019-09-22T09:57:10.073Z",
+    "output": "2019-09-22T09:57:10.073Z",
+    "comment": "Output based on console.log is .toISOString()"
+  },
+  {
+    "name": "new Date().toGMTString()",
+    "input": "Sun, 22 Sep 2019 10:14:03 GMT",
+    "output": "2019-09-22T10:14:03.000Z",
+    "comment": "(Deprecated) The toGMTString() method converts a date to a string, using Internet Greenwich Mean Time (GMT) conventions. The exact format of the value returned by toGMTString() varies according to the platform and browser, in general it should represent a human readable date string. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString>"
+  },
+  {
+    "name": "new Date().toDateString()",
+    "input": "Sun Sep 22 2019",
+    "output": "2019-09-21T17:00:00.000Z",
+    "comment": "The toDateString() method is especially useful because compliant engines implementing ECMA-262 may differ in the string obtained from toString() for Date objects, as the format is implementation-dependent and simple string slicing approaches may not produce consistent results across multiple engines. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString#Description>"
+  },
+  {
+    "name": "new Date().toLocaleDateString()",
+    "input": "9/22/2019",
+    "output": "2019-09-21T17:00:00.000Z",
+    "comment": "The toLocaleDateString() method returns a string with a language sensitive representation of the date portion of this date. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString>"
+  },
+  {
+    "name": "new Date().toLocaleString()",
+    "input": "9/22/2019, 5:15:07 PM",
+    "output": "2019-09-22T10:15:07.000Z",
+    "comment": "The toLocaleString() method returns a string with a language sensitive representation of this date. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString>"
+  },
+  {
+    "name": "new Date().toString()",
+    "input": "Sun Sep 22 2019 17:15:33 GMT+0700 (Indochina Time)",
+    "output": "2019-09-22T10:15:33.000Z",
+    "comment":"a string representation of the Date in the format specified in ECMA-262. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString#Description>"
+  },
+  {
+    "name": "new Date().toUTCString()",
+    "input": "Sun, 22 Sep 2019 10:15:48 GMT",
+    "output": "2019-09-22T10:15:48.000Z",
+    "comment": "The value returned by toUTCString() is a string in the same format as Date.prototype.toString() but with a zero timezone offset (UTC). <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString#Description>"
+  },
+  {
+    "name": "Python's 'str(datetime.now())'",
+    "input": "2019-09-22 17:16:32.297263",
+    "output": "2019-09-22T10:16:32.297Z",
+    "comment": "Python uses a different form of ISO 8601."
+  },
+  {
+    "name": "Invalid random string",
+    "input": "not a real date",
+    "output": null,
+    "comment": "If a string does not match any of the above formats and is not able to be parsed with Date.parse, moment#isValid will return false."
+  },
+  {
+    "name": "Number",
+    "input": "0",
+    "output": null,
+    "comment": "Apparently, both new Date(0) and moment(0).toDate() returns a valid Date, which shouldn't be."
+  },
+  {
+    "name": "false (not a real month)",
+    "input": "2010 13",
+    "output": null,
+    "comment": "If the moment that results from the parsed input does not exist, moment#isValid will return false."
+  },
+  {
+    "name": "false (not a real day) -- Does not fail when format is not specified",
+    "input": "2010 11 31 12:00",
+    "output": "2010-12-01T05:00:00.000Z",
+    "comment": "If the moment that results from the parsed input does not exist, moment#isValid will return false."
+  },
+  {
+    "name": "false (not a leap year) -- Does not fail when format is not specified",
+    "input": "2010 2 29 12:00",
+    "output": "2010-03-01T05:00:00.000Z",
+    "comment": "If the moment that results from the parsed input does not exist, moment#isValid will return false."
+  },
+  {
+    "name": "false (not a real month name)",
+    "input": "2010 notamonth 29",
+    "output": null,
+    "comment": "If the moment that results from the parsed input does not exist, moment#isValid will return false."
+  },
+  {
+    "name": "Cannot apply strict passing because format is not specified.",
+    "input": "It is 2012-05-25",
+    "output": "2012-05-24T17:00:00.000Z",
+    "comment": "As of version 2.3.0, you may specify a boolean for the last argument to make Moment use strict parsing. Strict parsing requires that the format and input match exactly, including delimeters."
+  }
+]

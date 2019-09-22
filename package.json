@@ -1,0 +1,37 @@
+{
+  "name": "valid-moment",
+  "version": "1.0.0",
+  "description": "Convert standard date string to Date, based on moment.js; and invalidate bad formatting",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "test": "ts-mocha tests/**/*.spec.ts",
+    "build": "tsc -p tsconfig.lib.json"
+  },
+  "author": {
+    "name": "Pacharapol Withayasakpunt",
+    "email": "patarapolw@gmail.com",
+    "url": "https://polvcode.dev"
+  },
+  "keywords": [
+    "moment",
+    "moment.js",
+    "date-parser"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patarapolw/valid-moment.git"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "mocha": "^6.2.0",
+    "ts-mocha": "^6.0.0",
+    "typescript": "^3.6.3"
+  }
+}
