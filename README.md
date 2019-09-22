@@ -8,7 +8,8 @@ Convert standard date string to Date, based on moment.js; and invalidate bad for
 
 Valid date strings include,
 
-- ISO date string (from JavaScript, Python and Java)
+- ISO 8601 date strings (from JavaScript, Python or Java)
+- RFC 2822 date strings
 - Locale string
 
 Invalid date string include,
